@@ -41,6 +41,8 @@ Thumbs.db
 .vscode
 .settings
 node_modules
+dist
+docs
 
 # Extra #
 #########
