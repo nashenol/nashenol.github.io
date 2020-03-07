@@ -42,7 +42,6 @@ Thumbs.db
 .settings
 node_modules
 dist
-docs
 
 # Extra #
 #########
