@@ -23,5 +23,3 @@ jobs:
         CI: true
     - run: npm run deploy
       if: contains(github.ref, 'master')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
