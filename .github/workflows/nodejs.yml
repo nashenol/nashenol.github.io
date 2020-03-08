@@ -27,3 +27,4 @@ jobs:
       if: contains(github.ref, 'master')
     - run: npm run deploy
       if: contains(github.ref, 'master')
+      name: 42261670+nashenol@users.noreply.github.com
