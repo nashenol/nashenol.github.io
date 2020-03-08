@@ -22,8 +22,8 @@ jobs:
       env:
         CI: true
     - run: git config --global user.email "42261670+nashenol@users.noreply.github.com"
-      if: contains(github.ref, "master")
+      if: contains(github.ref, 'master')
     - run: git config --global user.name "nashenol"
-      if: contains(github.ref, "master")
+      if: contains(github.ref, 'master')
     - run: npm run deploy
       if: contains(github.ref, 'master')
