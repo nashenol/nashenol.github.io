@@ -21,4 +21,4 @@ jobs:
     - run: npm run build --if-present
       env:
         CI: true
-    - run: npm run deploy --github.ref == 'master'
+    - run: npm run deploy
