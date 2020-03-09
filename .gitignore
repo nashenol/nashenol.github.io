@@ -41,7 +41,3 @@ Thumbs.db
 .vscode
 .settings
 node_modules
-
-# Extra #
-#########
-package-lock.json
