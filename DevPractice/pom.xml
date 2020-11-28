@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>[1.18.16,)</version>
+			<version>edge-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -86,7 +86,7 @@
 							<path>
 								<groupId>org.projectlombok</groupId>
 								<artifactId>lombok</artifactId>
-								<version>[1.18.16,)</version>
+								<version>edge-SNAPSHOT</version>
 							</path>
 						</annotationProcessorPaths>
 					</configuration>
@@ -100,11 +100,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M3</version>
-					<configuration>
-						<!-- needed so that lombok does not throw errors during tests -->
-						<forkCount>0</forkCount>
-					</configuration>
+					<version>2.22.1</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
