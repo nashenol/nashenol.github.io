@@ -2,7 +2,7 @@ package zone.data;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Set;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,7 +47,7 @@ public class DataMakerTest {
 
 		Integer bound = 10;
 
-		Set<NumberObject> list = dataMaker.generateRandomdList(bound);
+		List<NumberObject> list = dataMaker.generateRandomdNumberList(bound);
 
 		assertEquals(list.size(), bound.intValue());
 	}

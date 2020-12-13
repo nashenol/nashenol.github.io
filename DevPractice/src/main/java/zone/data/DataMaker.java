@@ -4,10 +4,8 @@
 package zone.data;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import zone.models.NumberObject;
 
@@ -17,23 +15,25 @@ import zone.models.NumberObject;
  */
 public class DataMaker {
 
-	public Integer generateListSize(Integer sizeRange) {
+	private static final Integer DEFAULT_LIST_SIZE = 10;
 
+	public Integer generateListSize(Integer sizeRange) {
 		Random rand = new Random();
+		Integer range = sizeRange != null ? sizeRange : DEFAULT_LIST_SIZE;
 
 		try {
-			return rand.nextInt(sizeRange);
+			return rand.nextInt(range);
 		} catch (IllegalArgumentException e) {
 			System.out.println("Invalid size range given");
 			return null;
 		}
 	}
 
-	public Set<NumberObject> generateRandomdList(Integer range) {
-
-		Set<NumberObject> list = new HashSet<>();
+	public List<NumberObject> generateRandomdNumberList(Integer listSize) {
+		List<NumberObject> list = new ArrayList<>();
 		List<Integer> usedNumberList = new ArrayList<>();
 		Random rand = new Random();
+		Integer range = listSize != null ? listSize : generateListSize(listSize);
 
 		while (usedNumberList.size() < range) {
 			int number = rand.nextInt(range);
@@ -46,7 +46,6 @@ public class DataMaker {
 		}
 
 		return list;
-
 	}
 
 }

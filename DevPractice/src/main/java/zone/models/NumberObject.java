@@ -5,13 +5,10 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class NumberObject extends SimpleObject {
-
-	private Integer value;
+public class NumberObject extends SimpleObject<Integer> {
 
 	public NumberObject(Integer value) {
-		super();
-		this.value = value;
+		super(value);
 	}
 
 }
